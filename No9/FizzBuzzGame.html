@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>フィズバズゲーム</h1>
+    <p>3で割り切れるなら「フィズ」、5で割り切れるなら「バズ」、3でも5でも割り切れるなら「フィズバズ」と表示されます。</p>
+    <p>1〜100の中から数字を入力してください。</p>
+    <input type="number" id="maxNumber" min="1" max="100" />
+    <button id="play">実行</button>
+    <ul id="output"></ul>
+    <script>
+        const btn = document.getElementById("play");
+        btn.addEventListener("click", playFizzBuzz);
+
+        function playFizzBuzz() {
+            let maxNum = document.getElementById("maxNumber").value;
+            let output = document.getElementById("output");
+            output.innerHTML = "";
+            
+            for(let i = 1; i <= maxNum; i++) {
+                let item = document.createElement("li");
+                let foundFizzBuzz = false;
+
+                if (i % 3 == 0 && i % 5==0) {
+                    item.textContent = "フィズバズ";
+                    foundFizzBuzz = true;
+                } else if (i % 5 == 0) {
+                    item.textContent = "フィズ";
+                } else if (i % 3 == 0) {
+                    item.textContent = "バズ";
+                } else {
+                    item.textContent = i;
+                }
+
+                output.appendChild(item);
+
+                if(foundFizzBuzz) {
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

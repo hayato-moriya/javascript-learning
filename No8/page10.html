@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">サイコロ</button>
+    <p id="text">出目</p>
+    <script>
+        function dice() {
+            let number = Math.random() * 6 + 1;
+            number = Math.floor(number);
+            console.log(number);
+            if (number == 1) {
+                dice_number.textContent = "出目は1です";
+            } else if (number == 2) {
+                dice_number.textContent = "出目は2です";
+            } else if (number == 3) {
+                dice_number.textContent = "出目は3です";
+            } else if (number == 4) {
+                dice_number.textContent = "出目は4です";
+            } else if (number == 5) {
+                dice_number.textContent = "出目は5です";
+            } else {
+                dice_number.textContent = "出目は6です";
+            }
+        }
+        const btn = document.getElementById("btn");
+        const dice_number = document.getElementById("text");
+        btn.onclick = dice;
+    </script>
+</body>
+
+</html>

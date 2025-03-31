@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <p>買い物リスト</p>
+    <ul id="vegetable">
+        <li>にんじん</li>
+        <li>じゃがいも</li>
+        <li>たまねぎ</li>
+    </ul>
+    <ul id="other">
+        <li>こしょう</li>
+        <li>豚肉</li>
+        <li>カレー粉</li>
+    </ul>
+    <script>
+        const veg = document.getElementById("vegetable");
+        const other = document.getElementById("other");
+        other.style.color = "red";
+        other.firstElementChild.remove();
+        veg.before(other); // ここがテキストと異なっている
+    </script>
+</body>
+
+</html>

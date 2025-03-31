@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>占いアプリ</title>
+</head>
+
+<body>
+    <h1>占いアプリ</h1>
+    <div class="wrapper">
+        <p>名前を入力してください</p>
+        <input id="username-input" />
+        <button id="btn">占う</button>
+        <p id="username"></p>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const username_input = document.getElementById("username-input");
+        const btn = document.getElementById("btn");
+        const username = document.getElementById("username");
+        const result = document.getElementById("result");
+
+        function fortune() {
+            let number = Math.random() * 5 + 1;
+            number = Math.floor(number);
+
+            let fortune;
+
+            if (number == 1) {
+                fortune = "大吉";
+            } else if (number == 2) {
+                fortune = "中吉";
+            } else if (number == 3) {
+                fortune = "小吉";
+            } else if (number == 4) {
+                fortune = "吉";
+            } else {
+                fortune = "凶";
+            }
+
+            if (username_input.value == "") {
+                username.textContent = "名前が入力されていません";
+            } else {
+                username.textContent = username_input.value + "さんの運勢は・・・";
+                result.textContent = fortune;
+            }
+        }
+
+        btn.addEventListener("click", fortune);
+    </script>
+</body>
+
+</html>

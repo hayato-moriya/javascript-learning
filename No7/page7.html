@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>マリンスポーツ</h1>
+
+    <h5>
+        海は地球の表面の約70％を占めている海水で満たされた部分のことを指します。誕生は44億年前ですが、安定して存在できるようになったのは38億年間からだと考えられています。<br />
+        海で行うスポーツやアクティビティはいくつもありますが、今回はそのうちの３つ紹介します。
+    </h5>
+    <img src="/Users/hayato/Projects/javascript-learning/No7/img/rr19330a-1024x605.jpg" />
+
+    <div>
+        <h3>サーフィン</h3>
+        ボードを使って波に乗り海との一体感や爽快感が楽しめるスポーツです。<br />
+
+        <h3>スキューバダイビング</h3>
+        空気を詰めたタンクを背負って海深くまで潜り、景色や生き物などの海中世界を楽しむ事ができます。<br />
+
+        <h3>フライボード</h3>
+        フライボードは比較的新しい、足元から水を噴射して空中を飛行して楽しむウォーターアクティビティです。<br />
+    </div>
+
+    <h2>アンケート</h2>
+    興味を持ったスポーツはどれですか？<br />
+    <form name="myForm">
+        <input name="myRadio" type="radio" value="サーフィン" />サーフィン<br />
+        <input name="myRadio" type="radio" value="スキューバダイビング" />スキューバダイビング<br />
+        <input name="myRadio" type="radio" value="フライボード" />フライボード<br />
+        <button>回答</button>
+    </form>
+    <script>
+        const bg = document.querySelector("body");
+        const info = document.querySelector("h5");
+        const pct = document.querySelector("img");
+
+        function changeBackGround() {
+            this.style.backgroundColor = "lightblue";
+        }
+
+        function pct1() {
+            this.style.opacity = "0.8";
+        }
+
+        function pct2() {
+            this.style.opacity = "1";
+        }
+
+        bg.onclick = changeBackGround;
+        info.onclick = function () {
+            window.alert("豆知識：地球上に存在する水の97%は海");
+        }
+
+        pct.addEventListener("mouseover", pct1);
+        pct.addEventListener("mouseout", pct2);
+
+        document.myForm.addEventListener("change", function() {
+            console.log(document.myForm.myRadio.value);
+        })
+    </script>
+</body>
+
+</html>

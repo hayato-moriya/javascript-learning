@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><input type="radio" id="radio1" name="number">1</p>
+    <p><input type="radio" id="radio2" name="number">2</p>
+    <p><input type="button" id="button1"></p>
+    <p><input type="button" id="button2" value="ボタン"></p>
+    <script>
+        // getAttribute
+        let r1 = document.getElementById("radio1").getAttribute("type");
+        console.log(r1);
+
+        // hasAttribute
+        let r2 = document.getElementById("radio1").hasAttribute("type");
+        let r3 = document.getElementById("radio1").hasAttribute("value");
+        console.log(r2);
+        console.log(r3);
+
+        // setAttribute
+        let b1 = document.getElementById("button1");
+        b1.setAttribute("value", "ボタンです");
+        console.log(b1.getAttribute("value"));
+
+        // removeAttribute
+        let b2 = document.getElementById("button2");
+        b2.removeAttribute("value");
+        console.log(b2.getAttribute("value"));
+    </script>
+</body>
+
+</html>

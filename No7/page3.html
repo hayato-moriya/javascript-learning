@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>入力を待っています。</p>
+    <input type="text" id="textbox" />
+    <button id="btn">Press Me</button>
+    <script>
+        function text1() {
+            console.log("入力開始");
+        }
+        function text2() {
+            console.log("入力中");
+        }
+        function myFunc1() {
+            btn.style.color = "blue";
+        }
+        function myFunc2() {
+            btn.style.backgroundColor = "black";
+        }
+
+        const textbox = document.getElementById("textbox");
+        const btn = document.getElementById("btn");
+        textbox.addEventListener("click", text1);
+        textbox.addEventListener("input", text2);
+        btn.addEventListener("click", myFunc1);
+        btn.addEventListener("click", myFunc2);
+
+        // 回答
+        textbox.removeEventListener("input", text2);
+        btn.removeEventListener("click", myFunc2);
+    </script>
+</body>
+
+</html>

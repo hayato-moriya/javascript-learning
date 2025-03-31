@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>会員登録</p>
+    <p>名前<input id="name" type="text"><button id="btn1">登録</button></p>
+    <p>住所<input id="address" type="text"><button id="btn2">登録</button></p>
+    <script>
+        function silver() {
+            this.style.backgroundColor = "silver";
+        }
+
+        function center() {
+            this.style.textAlign = "center";
+        }
+
+        function myFunc() {
+            this.style.fontWeight = "bold";
+            this.style.borderColor = "lightgreen";
+        }
+
+        const name = document.getElementById("name");
+        const address = document.getElementById("address");
+        const nameBtn = document.getElementById("btn1");
+        const addressBtn = document.getElementById("btn2");
+        
+        name.addEventListener("keydown", silver);
+        address.addEventListener("keydown", silver);
+        name.addEventListener("select", center);
+        address.addEventListener("select", center);
+        nameBtn.addEventListener("click", myFunc);
+        addressBtn.addEventListener("click", myFunc);
+    </script>
+</body>
+
+</html>

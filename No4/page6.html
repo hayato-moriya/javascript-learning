@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li type="1">曾祖父：やすべぇ、曾祖母：梅</li>
+        <li type="1">祖父：一郎、祖母：花子</li>
+        <li type="1">父：武司、母：香織</li>
+        <li type="1">自分</li>
+        <li type="1">息子：晴翔</li>
+        <li type="1">孫：紬</li>
+    </ol>
+    <div id="question">
+        <p><b>問題</b></p>
+        <ol>
+            <li type="1">自分から見て孫は誰か？</li>
+        </ol>
+    </div>
+    <script>
+        let change_text = document.querySelector("#question b");
+        change_text.innerHTML = "回答";
+        let change_answer = document.querySelector("#question li");
+        change_answer.type = "A";
+        change_answer.innerHTML = "紬";
+    </script>
+</body>
+
+</html>

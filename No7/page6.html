@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent-div">
+        <br />
+        <ul id="parent-ul">
+            <li id="target">ここをクリック</li>
+            <li>リスト</li>
+            <li>リスト</li>
+        </ul>
+        <br />
+    </div>
+    <script>
+        function myFunc1() {
+            this.style.backgroundColor = "LightBlue";
+        }
+        function myFunc2() {
+            this.style.backgroundColor = "LightGrey";
+        }
+        function myFunc3() {
+            this.style.backgroundColor = "LightPink";
+        }
+        const li = document.getElementById("target");
+        const ul = document.getElementById("parent-ul");
+        const div = document.getElementById("parent-div");
+        li.addEventListener("click", myFunc1);
+        ul.addEventListener("click", myFunc2);
+        div.addEventListener("click", myFunc3);
+    </script>
+</body>
+
+</html>
