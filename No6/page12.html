@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <p><b>問題</b> 要素がダブルクリックされたときのイベント名は次のうちどれ？</p>
+    <form name="question">
+        <input type="radio" name="options" value="不正解" />click<br>
+        <input type="radio" name="options" value="正解" />dblclick<br>
+        <input type="radio" name="options" value="不正解" />onclick<br>
+        <input type="radio" name="options" value="不正解" />ondblclick<br>
+    </form>
+    <p id="answer">解答欄</p>
+    <script>
+        const ans = document.getElementById("answer")
+        function renewal() {
+            ans.textContent = document.question.options.value;
+        }
+        document.question.addEventListener("change", renewal);
+    </script>
+</body>
+
+
+</html>

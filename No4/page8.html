@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <ul>
+            <li id="child">移動予定</li>
+            <li>リスト</li>
+            <li>リスト</li>
+        </ul>
+        <ul id="new-parent">
+            <li>リスト</li>
+            <li>リスト</li>
+        </ul>
+        <div id="number">
+            <div id="one">one</div>
+            <div id="two">two</div>
+        </div>
+        <div id="zero">zero</div>
+
+        <script>
+            // append
+            const parent = document.getElementById("new-parent");
+            const child = document.getElementById("child");
+            parent.append(child);
+            console.log(parent.children);
+
+            // prepend
+            const parentA = document.getElementById("number");
+            const childA = document.getElementById("zero");
+            parentA.prepend(childA);
+        </script>
+    </body>
+</body>
+
+</html>

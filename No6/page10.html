@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Change!!</button>
+    <script>
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+        function change_color() {
+            const rndCol = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+            document.body.style.backgroundColor = rndCol;
+        }
+        const btn = document.getElementById("btn");
+        btn.onclick = change_color;
+    </script>
+</body>
+
+</html>

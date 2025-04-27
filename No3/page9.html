@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="greeting" style="color: red; background-color: blue; width: 50px; height: 30px;">
+        <p>Hello!</p>
+    </div>
+
+    <script>
+        // スタイル属性の取得
+        let element = document.getElementById("greeting");
+        console.log(element.style.color);
+        console.log(element.style.backgroundColor);
+
+        // スタイル属性の変更
+        element.style.color = "black";
+        console.log(element.style.color);
+    </script>
+</body>
+
+</html>
